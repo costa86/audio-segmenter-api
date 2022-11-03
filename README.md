@@ -10,7 +10,7 @@ The project is an API that receives an audio file as a input, analyses it with a
 The project was built on top of [inaSpeechSegmenter](https://github.com/ina-foss/inaSpeechSegmenter), where we added [api](/api) as a custom [FastAPI](https://fastapi.tiangolo.com/) project. [Dockerfile](../Dockerfile) was modified to serve the API along with the base project.
 
 ### Specs
-The audio analyses process might take a while to be handled, therefore the procedure is divided into 2 steps.
+The audio analysis process might take a while to be handled, therefore the procedure is divided into 2 steps.
 1. A `POST` request with the audio file. The user receives a ticket ID that identifies the audio analysis request.
 2. A `GET` request with the ticket ID. The user receives the result or the status of the audio analysis, since it might still be in queue to be processed.
 
